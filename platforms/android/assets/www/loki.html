@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Inicio Brick v_0.0.1</title>
+	<meta charset="UTF-8">
+	<!-- etiquetas para android -->
+	<meta name="format-detection" content="telephone=yes" />
+  	<meta name="msapplication-tap-highlight" content="yes" />
+  	<uses-permission android:name="android.permission.INTERNET" />
+  	 
+  	<link rel="stylesheet" type="text/css" href="app/components/bootstrap/dist/css/bootstrap.css">
+  	<link rel="stylesheet" type="text/css" href="app/components/bootstrap/dist/css/bootstrap-theme.css">
+  		
+  	<script src="app/components/jquery/jquery2.min.js"></script>
+  	<script src="app/components/bootstrap/dist/js/bootstrap.js"></script>
+  	<script src="app/components/lokijs/src/lokijs.js"></script>
+  	
+
+  	<script>
+		$(function(){
+
+
+			var db = new loki('loki.json');
+			console.log("database creada");
+
+			var children = db.addCollection('children');
+
+			children.insert({name:'Sleipnir', legs: 8});
+			children.insert({name:'Jormungandr', legs: 0});
+			children.insert({name:'Hel', legs: 2});
+
+			children.get(1); // returns Sleipnir 
+			children.find( {'name':'Sleipnir'} );
+			children.find( { legs: { '$gt' : 2 } } );
+
+
+			var legs = children.addDynamicView('legs'); 
+			legs.applyFind( { legs: { '$gt' : 2 } });
+			legs.applySimpleSort('legs');
+			legs.data();
+
+
+			children.mapReduce( 
+			  function( obj ){ return obj.legs; } , 
+			  function( array ) { 
+			    var sum = 0;
+			    for (var i=0; i < array.length; i++ ){ 
+			      sum += array[i];
+			    }
+			    return ( sum / array.length ).toFixed(2);
+			 });
+
+
+
+		});
+	</script>
+</head>
+<body>
+
+	<nav class="navbar navbar-default"><!-- fixed para que se quede ahi -->
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button> <!-- este es el boton de menu -->
+
+	      <!--<a class="navbar-brand" href="#">Brand</a>-->
+	      <p class="navbar-brand">Brick</p>
+
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><!-- este collapse permite el boton de menu -->
+	      	      
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#">Link</a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+	          <ul class="dropdown-menu" role="menu">
+	            <li><a href="#">Action</a></li>
+	            <li><a href="#">Another action</a></li>
+	            <li><a href="#">Something else here</a></li>
+	            <li class="divider"></li>
+	            <li><a href="#">Separated link</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+	<h2>Test LokiJS</h2>
+	
+
+</body>
+</html>
