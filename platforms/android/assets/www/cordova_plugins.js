@@ -48,6 +48,13 @@ module.exports = [
         "clobbers": [
             "SQLitePlugin"
         ]
+    },
+    {
+        "file": "plugins/com.cordova.plugin.localNotificationPlugin/www/phonegap/plugin/localNotification/localNotification.js",
+        "id": "com.cordova.plugin.localNotificationPlugin.localNotificationPlugin",
+        "clobbers": [
+            "window.localNotification"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -56,7 +63,8 @@ module.exports.metadata =
     "com.phonegap.plugins.barcodescanner": "2.0.1",
     "org.apache.cordova.camera": "0.3.6",
     "org.apache.cordova.device": "0.3.0",
-    "io.litehelpers.cordova.sqlite": "0.7.7"
+    "io.litehelpers.cordova.sqlite": "0.7.7",
+    "com.cordova.plugin.localNotificationPlugin": "2.1.1"
 }
 // BOTTOM OF METADATA
 });

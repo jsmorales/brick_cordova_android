@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.brick.app_v1" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>HelloCordova</name>
+    <name>Brick-mobile</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Calculadora de materiales para android.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="jhellmetal2000@gmail.com" href="https://github.com/jsmorales/brick_cordova_android">
+      Ingeniero de Desarrollo Johan Morales
     </author>
     <content src="index.html" />
     <access origin="*" />

@@ -1,201 +1,82 @@
+
 <!DOCTYPE html>
-<html lang="es">
-<head>
-	<title>Inicio Brick v_0.0.1</title>
-	<meta charset="UTF-8">
-	<!-- etiquetas para android -->
-	<meta name="format-detection" content="telephone=yes" />
-  	<meta name="msapplication-tap-highlight" content="yes" />
-  	<uses-permission android:name="android.permission.INTERNET" />
-  	 
-  	<link rel="stylesheet" type="text/css" href="app/components/bootstrap/dist/css/bootstrap.css">
-  	<link rel="stylesheet" type="text/css" href="app/components/bootstrap/dist/css/bootstrap-theme.css">
-  		
-  	<script type="text/javascript" src="cordova.js"></script>  	
-  	<script src="app/components/jquery/jquery2.min.js"></script>
-  	<script src="app/components/bootstrap/dist/js/bootstrap.js"></script>
-  	<script src="app/components/taffydb/taffy.js"></script>
-  	
+	<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Sql lite prueba</title>
+		<link rel="stylesheet" href="app/components/bootstrap/dist/css/bootstrap.css" charset="utf-8">
+		<!-- bootstrap-theme.css -->
+		<link rel="stylesheet" href="app/components/bootstrap/dist/css/bootstrap-theme.css" charset="utf-8">
+		<script src="app/components/jquery/dist/jquery.js"></script>
+		<script src="app/components/bootstrap/dist/js/bootstrap.js"></script>
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+		<script src="js/bd_prueba.js"></script>
+	</head>
+	<body>
 
-  	<script>
-		$(function(){
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
 
-			/*
-			//---------------------------------------------
-			function onLoad() {
-		        document.addEventListener("deviceready", onDeviceReady, false);
-		    }
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
-		    // device APIs are available
-		    //
-		    function onDeviceReady() {
-		        // Now safe to use device APIs
-		        $("#resultado_log").html("Dispositivo listo!");
-		    }
+		<h1>Probando bootstrap</h1>
 
-		    onLoad();
-			//---------------------------------------------*/
+		<h2 id="p_device"></h2>
 
-		/**/$(document).on("deviceready",function(){
-				
-				//$("#resultado_log").html("Dispositivo listo con jquery on()!");
+		<ul id="res" class="list-group">
+		  <!-- <li class="list-group-item">Cras justo odio</li> -->
+		</ul>
 
-				$(document).on("menubutton",function() {
-					$("#res_vol_up").html("Boton menú!");				
-				});
+	</body>
+	</html>
 
-				function iniciaBd(){
-
-					var db = window.sqlitePlugin.openDatabase({name: "brick.db"});
-
-					db.transaction(function(tx) {
-						tx.executeSql('DROP TABLE IF EXISTS test_table');
-			    		tx.executeSql('CREATE TABLE IF NOT EXISTS test_table (id integer primary key, nombre text)');
-					
-			    		//--------------------------------------------------------------------------------------------------------------
-			    		tx.executeSql("INSERT INTO test_table (id, nombre) VALUES (?,?)", [1, "angela"], function(tx, res) {});
-
-			    		tx.executeSql("INSERT INTO test_table (id, nombre) VALUES (?,?)", [2, "johan"], function(tx, res) {
-			    			//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-			    			db.transaction(function(tx) {
-						        tx.executeSql("select * from test_table;", [], function(tx, res) {
-						          //console.log("res.rows.length: " + res.rows.length + " -- should be 1");
-						          //console.log("res.rows.item(0).cnt: " + res.rows.item(0).cnt + " -- should be 1");
-						          //$("#res_vol_up").html(res.rows.length+"---"+res.rows.item(0).nombre);
-						          //---------------------------------------------------------------------------------
-						          /*No se puede implementar each porque hay qeu iterar necesariamente en item
-						          	$.each(res.rows.item(), function(index, val) {
-										 
-										 $("#resultado").append(
-												'<li class="list-group-item">'+val+'</li>'
-											);
-									});*/
-						        	for (var i = 0; i < res.rows.length; i++) {
-						        		$("#resultado").append(
-											'<li class="list-group-item">'+res.rows.item(i).id+"--"+res.rows.item(i).nombre+'</li>'
-										);
-						        	};
-						          //---------------------------------------------------------------------------------
-						        });
-						      });
-			    			//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-			    		},function(e) {
-					      //console.log("ERROR: " + e.message);
-					    });
-			    		//--------------------------------------------------------------------------------------------------------------
-
-					});
-
-					$("#resultado_log").html("bd creada!");	
-
-				};
-
-				iniciaBd();						
-
-			});
-
-
-			/*			
-			// Wait for Cordova to load
-			document.addEventListener("deviceready", onDeviceReady, false);
-
-			// Cordova is ready
-			function onDeviceReady() {
-			  //--------------------------------------------------------------------------------------------------------------
-			  var db = window.sqlitePlugin.openDatabase({name: "my.db"});	
-			  //--------------------------------------------------------------------------------------------------------------
-
-			  //--------------------------------------------------------------------------------------------------------------
-			  db.transaction(function(tx) {
-
-			  	//--------------------------------------------------------------------------------------------------------------
-			    tx.executeSql('DROP TABLE IF EXISTS test_table');
-			    tx.executeSql('CREATE TABLE IF NOT EXISTS test_table (id integer primary key, data text, data_num integer)');
-			    //--------------------------------------------------------------------------------------------------------------
-
-			    //--------------------------------------------------------------------------------------------------------------
-			    // demonstrate PRAGMA:
-			    db.executeSql("pragma table_info (test_table);", [], function(res) {
-			      console.log("PRAGMA res: " + JSON.stringify(res));
-			    });
-			    //--------------------------------------------------------------------------------------------------------------
-
-			    //--------------------------------------------------------------------------------------------------------------
-			    tx.executeSql("INSERT INTO test_table (data, data_num) VALUES (?,?)", ["test", 100], function(tx, res) {
-			      
-			      console.log("insertId: " + res.insertId + " -- probably 1");
-			      console.log("rowsAffected: " + res.rowsAffected + " -- should be 1");
-
-			      //--------------------------------------------------------------------------------------------------------------
-			      db.transaction(function(tx) {
-			        tx.executeSql("select count(id) as cnt from test_table;", [], function(tx, res) {
-			          console.log("res.rows.length: " + res.rows.length + " -- should be 1");
-			          console.log("res.rows.item(0).cnt: " + res.rows.item(0).cnt + " -- should be 1");
-			        });
-			      });
-			      //--------------------------------------------------------------------------------------------------------------
-
-			    }, function(e) {
-			      console.log("ERROR: " + e.message);
-			    });
-			    //--------------------------------------------------------------------------------------------------------------
-
-			  });
-			  //--------------------------------------------------------------------------------------------------------------
-
-			}*/	
-
-		});
-	</script>
-</head>
-<body>
-
-	<nav class="navbar navbar-default"><!-- fixed para que se quede ahi -->
-	  <div class="container-fluid">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-	      
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button> <!-- este es el boton de menu -->
-
-	      <!--<a class="navbar-brand" href="#">Brand</a>-->
-	      <p class="navbar-brand">Brick</p>
-
-	    </div>
-
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><!-- este collapse permite el boton de menu -->
-	      	      
-	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="loki.html">Loki</a></li>
-	        <li><a href="webstore.html">WebStore</a></li>
-	        <li><a href="indexed.html">Indexed DB</a></li>
-	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-	          <ul class="dropdown-menu" role="menu">
-	            <li><a href="#">Action</a></li>
-	            <li><a href="#">Another action</a></li>
-	            <li><a href="#">Something else here</a></li>
-	            <li class="divider"></li>
-	            <li><a href="#">Separated link</a></li>
-	          </ul>
-	        </li>
-	      </ul>
-
-	    </div><!-- /.navbar-collapse -->
-	  </div><!-- /.container-fluid -->
-	</nav>
-
-	<h2 id="resultado_log">Test Sqlite para Cordova</h2>
-	<br>
-	<p id="res_vol_up">Esta lista es cargada desde una BD SQLite.</p>
-	<p>Para crear una base de datos se escribe:</p>
-	<p>var nom_bd = window.sqlitePlugin.openDatabase({name: "nom_bd.db"});</p>
-	<ul id="resultado" class="list-group"></ul>
-	
-</body>
-</html>
+	android

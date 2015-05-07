@@ -22,5 +22,13 @@
             "type": "registry",
             "id": "io.litehelpers.cordova.sqlite"
         }
+    },
+    "com.cordova.plugin.localNotificationPlugin": {
+        "source": {
+            "type": "registry",
+            "id": "com.cordova.plugin.localnotificationplugin"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }
