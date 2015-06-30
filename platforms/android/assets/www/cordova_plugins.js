@@ -55,6 +55,14 @@ module.exports = [
         "clobbers": [
             "window.localNotification"
         ]
+    },
+    {
+        "file": "plugins/de.appplant.cordova.plugin.local-notification/www/local-notification.js",
+        "id": "de.appplant.cordova.plugin.local-notification.LocalNotification",
+        "clobbers": [
+            "cordova.plugins.notification.local",
+            "plugin.notification.local"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -64,7 +72,8 @@ module.exports.metadata =
     "org.apache.cordova.camera": "0.3.6",
     "org.apache.cordova.device": "0.3.0",
     "io.litehelpers.cordova.sqlite": "0.7.7",
-    "com.cordova.plugin.localNotificationPlugin": "2.1.1"
+    "com.cordova.plugin.localNotificationPlugin": "2.1.1",
+    "de.appplant.cordova.plugin.local-notification": "0.8.1"
 }
 // BOTTOM OF METADATA
 });

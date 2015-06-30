@@ -1,4 +1,24 @@
 /home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes.dex : \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/de/appplant/cordova/plugin/localnotification/LocalNotification$2.class \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/de/appplant/cordova/plugin/localnotification/TriggerReceiver.class \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/de/appplant/cordova/plugin/localnotification/LocalNotification.class \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/de/appplant/cordova/plugin/localnotification/RestoreReceiver.class \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/de/appplant/cordova/plugin/localnotification/ClickActivity.class \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/de/appplant/cordova/plugin/localnotification/LocalNotification$1.class \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/de/appplant/cordova/plugin/localnotification/ClearReceiver.class \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/de/appplant/cordova/plugin/notification/AbstractClickActivity.class \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/de/appplant/cordova/plugin/notification/Notification.class \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/de/appplant/cordova/plugin/notification/Options.class \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/de/appplant/cordova/plugin/notification/AbstractTriggerReceiver.class \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/de/appplant/cordova/plugin/notification/AssetUtil.class \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/de/appplant/cordova/plugin/notification/AbstractClearReceiver.class \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/de/appplant/cordova/plugin/notification/Notification$Type.class \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/de/appplant/cordova/plugin/notification/TriggerReceiver.class \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/de/appplant/cordova/plugin/notification/Builder.class \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/de/appplant/cordova/plugin/notification/Manager.class \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/de/appplant/cordova/plugin/notification/ClickActivity.class \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/de/appplant/cordova/plugin/notification/ClearReceiver.class \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/de/appplant/cordova/plugin/notification/AbstractRestoreReceiver.class \
 /home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/org/apache/cordova/camera/ExifHelper.class \
 /home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/org/apache/cordova/camera/FileHelper.class \
 /home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/org/apache/cordova/camera/CameraLauncher.class \
@@ -33,4 +53,5 @@
 /home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes/io/liteglue/SQLiteAndroidDatabase$QueryType.class \
 /home/cordova_proyects/brick_cordova/platforms/android/ant-build/dexedLibs/classes-ab9b139f59179aa768fec12245659a22.jar \
 /home/cordova_proyects/brick_cordova/platforms/android/ant-build/dexedLibs/com.google.zxing.client.android.captureactivity-fc224b0c8282d7e1578a4b051ed72e86.jar \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/dexedLibs/android-support-v4-9f106e52527bd66944abcb809cf13d99.jar \
 /home/cordova_proyects/brick_cordova/platforms/android/ant-build/dexedLibs/sqlite4java-8abea9c9f8e5c43518904a699da37eac.jar \

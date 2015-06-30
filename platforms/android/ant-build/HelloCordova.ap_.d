@@ -35,6 +35,7 @@
 /home/cordova_proyects/brick_cordova/platforms/android/res/values-ca/strings.xml \
 /home/cordova_proyects/brick_cordova/platforms/android/res/drawable/shopper_icon.png \
 /home/cordova_proyects/brick_cordova/platforms/android/res/drawable/launcher_icon.png \
+/home/cordova_proyects/brick_cordova/platforms/android/res/drawable/ic_android_black_18dp.png \
 /home/cordova_proyects/brick_cordova/platforms/android/res/drawable/icon.png \
 /home/cordova_proyects/brick_cordova/platforms/android/res/drawable/share_via_barcode.png \
 /home/cordova_proyects/brick_cordova/platforms/android/res/values-hu/strings.xml \
@@ -81,6 +82,7 @@
 /home/cordova_proyects/brick_cordova/platforms/android/ant-build/res/drawable-port-mdpi/screen.png \
 /home/cordova_proyects/brick_cordova/platforms/android/ant-build/res/drawable/shopper_icon.png \
 /home/cordova_proyects/brick_cordova/platforms/android/ant-build/res/drawable/launcher_icon.png \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/res/drawable/ic_android_black_18dp.png \
 /home/cordova_proyects/brick_cordova/platforms/android/ant-build/res/drawable/icon.png \
 /home/cordova_proyects/brick_cordova/platforms/android/ant-build/res/drawable/share_via_barcode.png \
 /home/cordova_proyects/brick_cordova/platforms/android/ant-build/res/drawable-hdpi/shopper_icon.png \
@@ -96,12 +98,16 @@
 /home/cordova_proyects/brick_cordova/platforms/android/assets/www/cordova_plugins.js \
 /home/cordova_proyects/brick_cordova/platforms/android/assets/www/plugins \
 /home/cordova_proyects/brick_cordova/platforms/android/assets/www/bower.json \
+/home/cordova_proyects/brick_cordova/platforms/android/assets/www/ladrillos.html \
 /home/cordova_proyects/brick_cordova/platforms/android/assets/www/notification.png \
+/home/cordova_proyects/brick_cordova/platforms/android/assets/www/pruab \
 /home/cordova_proyects/brick_cordova/platforms/android/assets/www/app \
 /home/cordova_proyects/brick_cordova/platforms/android/assets/www/index.html \
 /home/cordova_proyects/brick_cordova/platforms/android/assets/www/cordova.js \
+/home/cordova_proyects/brick_cordova/platforms/android/assets/www/pruab.php \
 /home/cordova_proyects/brick_cordova/platforms/android/assets/www/js \
 /home/cordova_proyects/brick_cordova/platforms/android/assets/www/plugins/com.cordova.plugin.localNotificationPlugin \
+/home/cordova_proyects/brick_cordova/platforms/android/assets/www/plugins/de.appplant.cordova.plugin.local-notification \
 /home/cordova_proyects/brick_cordova/platforms/android/assets/www/plugins/io.litehelpers.cordova.sqlite \
 /home/cordova_proyects/brick_cordova/platforms/android/assets/www/plugins/org.apache.cordova.device \
 /home/cordova_proyects/brick_cordova/platforms/android/assets/www/plugins/com.phonegap.plugins.barcodescanner \
@@ -111,6 +117,8 @@
 /home/cordova_proyects/brick_cordova/platforms/android/assets/www/plugins/com.cordova.plugin.localNotificationPlugin/www/phonegap/plugin \
 /home/cordova_proyects/brick_cordova/platforms/android/assets/www/plugins/com.cordova.plugin.localNotificationPlugin/www/phonegap/plugin/localNotification \
 /home/cordova_proyects/brick_cordova/platforms/android/assets/www/plugins/com.cordova.plugin.localNotificationPlugin/www/phonegap/plugin/localNotification/localNotification.js \
+/home/cordova_proyects/brick_cordova/platforms/android/assets/www/plugins/de.appplant.cordova.plugin.local-notification/www \
+/home/cordova_proyects/brick_cordova/platforms/android/assets/www/plugins/de.appplant.cordova.plugin.local-notification/www/local-notification.js \
 /home/cordova_proyects/brick_cordova/platforms/android/assets/www/plugins/io.litehelpers.cordova.sqlite/www \
 /home/cordova_proyects/brick_cordova/platforms/android/assets/www/plugins/io.litehelpers.cordova.sqlite/www/SQLitePlugin.js \
 /home/cordova_proyects/brick_cordova/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
@@ -358,5 +366,6 @@
 /home/cordova_proyects/brick_cordova/platforms/android/assets/www/app/components/jquery/dist/jquery.js \
 /home/cordova_proyects/brick_cordova/platforms/android/assets/www/app/components/jquery/dist/jquery.min.js \
 /home/cordova_proyects/brick_cordova/platforms/android/assets/www/app/components/jquery/dist/jquery.min.map \
+/home/cordova_proyects/brick_cordova/platforms/android/assets/www/js/bd_ladrillos.js \
 /home/cordova_proyects/brick_cordova/platforms/android/assets/www/js/bd_prueba.js \
 /home/cordova_proyects/brick_cordova/platforms/android/ant-build/AndroidManifest.xml \

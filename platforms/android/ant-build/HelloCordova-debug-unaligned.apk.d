@@ -3,6 +3,7 @@
 /home/cordova_proyects/brick_cordova/platforms/android/ant-build/classes.dex \
 /home/cordova_proyects/brick_cordova/platforms/android/CordovaLib/ant-build/classes.jar \
 /home/cordova_proyects/brick_cordova/platforms/android/libs/com.google.zxing.client.android.captureactivity.jar \
+/home/cordova_proyects/brick_cordova/platforms/android/libs/android-support-v4.jar \
 /home/cordova_proyects/brick_cordova/platforms/android/libs/sqlite4java.jar \
 /home/cordova_proyects/brick_cordova/platforms/android/libs/x86/libsqlite4java-android-i686.so \
 /home/cordova_proyects/brick_cordova/platforms/android/libs/arm64-v8a/libsqlite4java-android-aarch64.so \

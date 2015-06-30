@@ -35,6 +35,7 @@
 /home/cordova_proyects/brick_cordova/platforms/android/res/values-ca/strings.xml \
 /home/cordova_proyects/brick_cordova/platforms/android/res/drawable/shopper_icon.png \
 /home/cordova_proyects/brick_cordova/platforms/android/res/drawable/launcher_icon.png \
+/home/cordova_proyects/brick_cordova/platforms/android/res/drawable/ic_android_black_18dp.png \
 /home/cordova_proyects/brick_cordova/platforms/android/res/drawable/icon.png \
 /home/cordova_proyects/brick_cordova/platforms/android/res/drawable/share_via_barcode.png \
 /home/cordova_proyects/brick_cordova/platforms/android/res/values-hu/strings.xml \
@@ -81,6 +82,7 @@
 /home/cordova_proyects/brick_cordova/platforms/android/ant-build/res/drawable-port-mdpi/screen.png \
 /home/cordova_proyects/brick_cordova/platforms/android/ant-build/res/drawable/shopper_icon.png \
 /home/cordova_proyects/brick_cordova/platforms/android/ant-build/res/drawable/launcher_icon.png \
+/home/cordova_proyects/brick_cordova/platforms/android/ant-build/res/drawable/ic_android_black_18dp.png \
 /home/cordova_proyects/brick_cordova/platforms/android/ant-build/res/drawable/icon.png \
 /home/cordova_proyects/brick_cordova/platforms/android/ant-build/res/drawable/share_via_barcode.png \
 /home/cordova_proyects/brick_cordova/platforms/android/ant-build/res/drawable-hdpi/shopper_icon.png \
